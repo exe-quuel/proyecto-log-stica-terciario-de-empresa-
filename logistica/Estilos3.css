@@ -1,0 +1,507 @@
+/* --------------------------------------------------
+   RESET GENERAL PARA MÁRGENES Y PADDING
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente base para todo el sitio */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* --------------------------------------------------
+   ENCABEZADO / HEADER SUPERIOR
+-------------------------------------------------- */
+.header {
+  background-color: #005555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Ícono de menú hamburguesa (solo para móviles) */
+.menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* --------------------------------------------------
+   MENÚ DE NAVEGACIÓN (DESKTOP Y RESPONSIVE)
+-------------------------------------------------- */
+.nav {
+  display: flex;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00cccc;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #007777;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+}
+
+/* --------------------------------------------------
+   PANEL DE VIAJES
+-------------------------------------------------- */
+.contenedor-viaje {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.titulo-seccion {
+  text-align: center;
+  color: #005566;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #004466;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Tabla de viajes con scroll horizontal */
+.tabla-scroll {
+  overflow-x: auto;
+}
+
+.tabla-viajes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+.tabla-viajes th,
+.tabla-viajes td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-viajes th {
+  background-color: #007c91;
+  color: white;
+}
+
+/* --------------------------------------------------
+   BOTONES DE ACCIÓN DE VIAJES
+-------------------------------------------------- */
+.btn-aceptar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-aceptar:hover {
+  background-color: #218838;
+}
+
+.btn-rechazar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-rechazar:hover {
+  background-color: #c82333;
+}
+.btn-editar {
+  background-color: #007bff;    /* azul brillante tipo bootstrap */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+  background-color: #0056b3; /* azul más oscuro al hover */
+}
+
+/* --------------------------------------------------
+   PANEL DE ESTADO PERSONAL
+-------------------------------------------------- */
+.contenedor-personal {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.titulo-personal {
+  text-align: center;
+  color: #005566;
+  margin-bottom: 20px;
+}
+
+.card-personal {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-personal h3 {
+  margin-bottom: 15px;
+  color: #004466;
+}
+
+/* Tabla de datos personales */
+.tabla-personal {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla-personal th,
+.tabla-personal td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabla-personal th {
+  background-color: #007c91;
+  color: white;
+  width: 200px;
+}
+
+/* --------------------------------------------------
+   BOTONES DE ESTADO PERSONAL
+-------------------------------------------------- */
+.btn-personal-editar,
+.btn-personal-aceptar,
+.btn-personal-cancelar {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-personal-editar {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-personal-editar:hover {
+  background-color: #0056b3;
+}
+
+.btn-personal-aceptar {
+  background-color: #28a745;
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-personal-aceptar:hover {
+  background-color: #218838;
+}
+
+.btn-personal-cancelar {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-personal-cancelar:hover {
+  background-color: #c82333;
+}
+
+/* Campos del formulario de edición */
+.form-editar input[type="text"],
+.form-editar input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   NOTIFICACIONES (campana y menú desplegable)
+-------------------------------------------------- */
+.notificacion-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.icono-campana {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  color: #333;
+}
+
+.icono-campana.activa {
+  color: red;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* Menú desplegable de notificaciones */
+.menu-notificaciones {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background: rgb(12, 74, 65);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+  width: 300px;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.menu-notificaciones h4 {
+  margin: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #555151;
+  padding-bottom: 5px;
+}
+
+.menu-notificaciones ul {
+  list-style: none;
+  padding: 0 15px;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.menu-notificaciones li {
+  padding: 8px 0;
+  border-bottom: 1px solid #605a5a;
+  font-size: 14px;
+}
+
+/* Notificaciones no leídas */
+.menu-notificaciones li.no-leida {
+  font-weight: bold;
+  background-color: #987b7b;
+}
+
+/* Botón "Marcar como leídas" */
+.menu-notificaciones .marcar-leidas {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.menu-notificaciones .marcar-leidas:hover {
+  background: #0056b3;
+}
+
+.sin-notificaciones {
+  text-align: center;
+  color: #888;
+  padding: 10px;
+}
+
+/* --------------------------------------------------
+   MENÚ DE USUARIO (ícono y dropdown)
+-------------------------------------------------- */
+.dropdown-usuario {
+  position: relative;
+  display: inline-block;
+}
+
+.usuario-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  color: #50b892ff;
+}
+
+.submenu-usuario {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #07221b;
+  border: 1px solid #755d5d;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.submenu-usuario li {
+  padding: 8px 20px;
+}
+
+.submenu-usuario li:hover {
+  background-color: #755e5e;
+}
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown-usuario:hover .submenu-usuario {
+  display: block;
+}
+
+/* --------------------------------------------------
+   FORMULARIO DE CAMIONES (ALTA Y MODIFICACIÓN)
+-------------------------------------------------- */
+.form-camion input[type="text"],
+.form-camion input[type="date"],
+.form-camion select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.fila-camion {
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+/* --------------------------------------------------
+   titulos
+-------------------------------------------------- */
+label
+{
+  display: block;              /* Que cada label quede en su propia línea */
+  margin-bottom: 6px;          /* Espacio debajo del texto */
+  font-family: 'Arial', Courier, monospace;
+  font-size: 14px;             /* Tamaño de letra */
+  font-weight: bold;           /* Texto en negrita */
+  color: #333;          
+}
+
+.tr-detalle-empleado {
+  background-color: #f9f9f9;   /* Fondo claro para diferenciar del resto */
+  font-size: 16px;             /* Tamaño de letra legible */
+  color: #333;                 /* Color de texto oscuro pero suave */
+  padding: 10px 0;             /* Espaciado vertical */
+}
+
+.tr-detalle-empleado .open_empleado {
+  display: flex;
+  flex-direction: column;      /* Cada dato en línea separada */
+  gap: 5px;                    /* Espacio entre líneas */
+  padding: 10px 15px;          /* Espacio dentro del div */
+  border-left: 3px solid #007c91; /* Línea decorativa a la izquierda */
+  background-color: #eef7fa;   /* Fondo suave dentro del div */
+  border-radius: 6px;          /* Bordes redondeados */
+}
+/*
+informacion extra
+*/
+.open_viaje {
+    display: none;            /* oculto por defecto */
+    text-align: left;       /* centra el texto */
+    line-height: 1.8;         /* espacio entre líneas */
+    padding: 15px;            /* margen interno */
+    background-color: #f9f9f9;/* opcional: fondo */
+    border-radius: 8px;       /* opcional: esquinas redondeadas */
+}

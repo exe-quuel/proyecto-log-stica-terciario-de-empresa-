@@ -1,0 +1,114 @@
+/* Reset y fondo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #003333;
+    padding: 10px;
+    text-align: center;
+}
+
+.container-logo img {
+    max-height: 150px;
+}
+
+/* Formulario */
+.formulario {
+    background-color: #005555;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.formulario h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Contenedor de inputs */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-contenedor {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.input-contenedor input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Íconos */
+.input-contenedor i {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+
+/* Botón */
+.button {
+    background-color: #00aaaa;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #007777;
+}
+
+/* Error */
+p {
+    margin: 0;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .formulario {
+        width: 400px;
+    }
+}

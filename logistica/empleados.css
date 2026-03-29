@@ -1,0 +1,218 @@
+.info-camion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f9fc;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px 30px;
+  max-width: 750px;
+  margin: 30px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-camion:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.camion-datos {
+  flex: 1;
+}
+
+.camion-datos h3 {
+  font-size: 1.6em;
+  text-decoration: underline;
+  color: #003366;
+  margin-bottom: 12px;
+  margin-top: -8px;
+}
+
+.camion-datos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.camion-datos li {
+  font-size: 1.15em;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.camion-imagen {
+  text-align: center;
+  margin-left: 25px;
+}
+
+.icono-camion {
+  width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.texto-estado {
+  display: block;
+  margin-top: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+
+/* Colores del estado */
+.texto-estado.activo {
+  color: #28a745;
+}
+.texto-estado.mantenimiento {
+  color: #ffc107;
+}
+.texto-estado.inactivo {
+  color: #dc3545;
+}
+
+.tabla-viaje {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  font-size: 15px;
+}
+
+.tabla-viaje td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+}
+
+.tabla-viaje th {
+  background-color: #007777;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 12px 10px;
+  letter-spacing: 0.5px;
+}
+
+.tabla-viaje tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.tabla-viaje tr:hover {
+  background-color: #e6f3f6;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-viaje h3 {
+  font-size: 14px;
+  color: #007c91;
+  margin: 0;
+}
+
+.titulo-seccion {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  color: #004466;
+  margin: 0 auto 25px;
+  width: fit-content;
+  border-bottom: 3px solid #007c91;
+  padding-bottom: 5px;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-general {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.btn-aceptar {
+  background-color: #007c91;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-aceptar:hover {
+  background-color: #009fb3;
+}
+
+input[type="file"] {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+/* --- MENSAJE CUANDO NO HAY CAMIÓN O VIAJES --- */
+.info-camion p,
+.viajes-lista p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #555;
+  background-color: #fff3cd;
+  padding: 10px 15px;
+  border: 1px solid #ffeeba;
+  border-radius: 10px;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- TABLA DE VIAJES (corrige un detalle de nombre) --- */
+.tabla-viaje {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* --- FILAS ALTERNADAS Y EFECTO HOVER --- */
+.tabla-viajes tr:nth-child(even) {
+    border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.tabla-viajes tr:hover {
+  background-color: #eef8fa;
+  transition: background-color 0.2s ease;
+}
+
+/* --- CENTRADO GENERAL DEL BODY --- */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor-general {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.tabla-scroll {
+  overflow-x: auto;
+  margin-top: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 68, 102, 0.2);
+}
+

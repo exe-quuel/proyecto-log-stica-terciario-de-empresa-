@@ -1,0 +1,124 @@
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-estilo5 {
+  width: 100%;
+  padding: 10px 40px 10px 12px; /* espacio extra a la derecha para la flecha */
+  border: 1px solid #007c91;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  color: #004466;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.3s ease;
+}
+
+.select-estilo5:hover {
+  background-color: #007c91;
+  color: #ffffff;
+}
+
+.select-estilo5:focus {
+  outline: none;
+  border-color: #005555;
+  box-shadow: 0 0 6px rgba(0, 85, 85, 0.4);
+}
+
+/* FLECHA */
+.select-wrapper::after {
+  content: "▼";
+  font-size: 12px;
+  color: #007c91;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.select-wrapper:hover::after {
+  color: #005555;
+}
+
+a.btn-crear {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover: se vuelve blanco con texto verde */
+a.btn-crear:hover {
+    background-color: #ffffff;
+    color: #007c91; /* mismo verde del encabezado */
+}
+
+.btn-editador {
+  background-color: transparent;   /* Fondo transparente */
+  color: #007c91;                  /* Texto verde */
+  border: 2px solid #007c91;       /* Borde verde */
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover: fondo verde con texto blanco */
+.btn-editador:hover {
+  background-color: #007c91;
+  color: #ffffff;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Input del buscador */
+.buscador input[type="text"],
+.buscador input[type="number"] {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Botón Buscar */
+.buscador .btn-aceptar {
+  background-color: #50b892;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.buscador .btn-aceptar:hover {
+  background-color: #3da47e;
+}
+

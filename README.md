@@ -28,4 +28,25 @@ Aplicación web orientada a la administración de una empresa de logística. Per
 - PHP
 - MySQL
 - JavaScript
-- HTML/CSS 
+- HTML/CSS
+
+  ## ⚙️ Instalación y uso
+
+Este proyecto fue desarrollado en entorno local (XAMPP).
+
+### Requisitos
+- WAMPP o similar (Apache + MySQL)
+- Navegador web
+
+### Pasos para ejecutar
+1. Clonar o descargar el repositorio
+2. Colocar la carpeta en:
+   C:/Wampp/www/logistica
+3. pegarlo que esta en el archivo `bd_logistica.txt` en el sql de su base de datos
+4. Iniciar Apache y MySQL desde WAMPP
+5. Acceder desde el navegador:
+   http://localhost/logistica
+
+### Usuario de prueba
+- Usuario: maxwell
+- Contraseña: 12345

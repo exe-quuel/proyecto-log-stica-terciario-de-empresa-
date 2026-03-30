@@ -55,4 +55,11 @@ Este proyecto fue desarrollado en entorno local utilizando XAMPP/WAMP.
   ## 📌 Notas
 
 - Proyecto desarrollado como práctica académica  
-- Ejecutado en entorno local  
+- Ejecutado en entorno local
+
+  ## 👥 Autoría
+
+Proyecto desarrollado en conjunto con:
+
+- Ezequiel Larrosa
+- pricilla guerrero
